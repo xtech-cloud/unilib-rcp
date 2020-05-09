@@ -59,9 +59,9 @@ namespace XTC.RCP
 
         void onClientDisconnected(object _sender, Receiver.AsyncEventArgs _args)
         {
+            handleClientDisconnected(_args);
             if (null != OnFinish)
                 OnFinish(this, newArgs(_args, ""));
-            handleClientDisconnected(_args);
         }
 
         void onNetError(object _sender, Receiver.AsyncEventArgs _args)
